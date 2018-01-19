@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis|Poppins:100,400|Six+Caps');
+@import url("https://use.typekit.net/ofs2dps.css");
+
 .App {
   text-align: center;
 }
@@ -18,6 +21,42 @@
   font-size: 1.5em;
 }
 
+#demo img, #github img {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.description-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+        height: 100%;
+        width: 100%;
+    outline: none;
+    border: none;
+    color: #ffffff;
+    font-family: "Poppins";
+    background: none;
+    font-size: 1.4rem;
+}
+
+#buttonHolder {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+#demo, #github {
+    height: 3rem;
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
 .App-intro {
   font-size: large;
 }
@@ -25,4 +64,121 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+#entry-master {
+    width: 100vw;
+    position: absolute;
+}
+
+/* header */
+
+#entry-header {
+    width: 100vw;
+    height: 95vh;
+    background-color: #d32a87;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#entry-header-holder {
+    height: 65vmin;
+    width: 65vmin;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#entry-frame {
+    width: 100%;
+    height: 100%;
+}
+.header-tablet-landscape {
+    position: absolute;
+    height: 83.7%;
+    width: auto;
+    left: 18.6%;
+    top: 8%;
+}
+
+@media(max-width: 610px) and (orientation: portrait) {
+    #entry-header-holder {
+        height: 90vmin;
+        width: 90vmin;
+    }
+}
+#entry-header-text {
+    color: #ffffff;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 6vmin;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0%;
+    letter-spacing: 0.1em;
+}
+
+.divider-arrow {
+    position: absolute;
+    height: 6vh;
+    width: 6vh;
+    bottom: -3vh;
+    transform: rotateZ(45deg);
+}
+
+#description-arrow {
+    background-color: #ffffff;
+    z-index: 1;
+}
+
+#header-arrow {
+    background-color: #d32a87;
+}
+#entry-description {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#entry-gallery {
+    min-height: 50vh;
+    width: 100vw;
+    position: relative;
+    background-color: #d32a87;
+}
+
+h3, p {
+    color: #    d32a87;
+    font-family: 'Poppins';
+}
+h3 {
+
+    font-weight: 100;
+    font-size: 1.7em;
+    margin-bottom: 0.2em;
+    /* transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg); -for isometric headers */
+}
+p.description {
+
+    /* padding-top: 3em; -for isometric headers */
+    margin-top: 0;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+img.gallery {
+    padding: 10%;
+    max-width: 80vw;
+    max-height: auto;
+}
+video {
+    padding: 10%;
+    max-width: 80vw;
+    max-height: auto;
 }
