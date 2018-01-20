@@ -14,13 +14,17 @@ export class Entry extends Component {
         const entry = this.state.entry;
         const gallery = [];
         for(let i = 0; i < entry.gallery.length; i += 1){
+            let galleryElements = [];
             if(entry.gallery[i].type==='video'){
-                gallery.push(<video className="gallery gallery-video" key={i} alt="gallery video" autoplay="autoplay" loop="loop"><source src={ entry.gallery[i].src } /></video>);
+                galleryElements.push(<video className="gallery gallery-video" key={i} alt="gallery video" autoplay="autoplay" loop="loop"><source src={ entry.gallery[i].src } /></video>);
             }
             else {
-                gallery.push(<img className="gallery gallery-image" key={i} src={entry.gallery[i].src} />);
+                galleryElements.push(<img className="gallery gallery-image" key={i} src={entry.gallery[i].src} />);
             }
-
+            if( entry.gallery[i].description ){
+                galleryElements.push(<p className="gallery-description">{entry.gallery[i].description}</p>)
+            }
+            gallery.push(<div className="gallery-item-holder">{galleryElements}</div>);
         }
         console.log(gallery);
         if ( this.state.showEntry === true) {

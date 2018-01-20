@@ -172,13 +172,20 @@ p.description {
     padding-left: 8%;
     padding-right: 8%;
 }
-img.gallery {
+.gallery-item-holder {
     padding: 10%;
     max-width: 80vw;
+}
+img.gallery {
+    max-width: 100%;
     max-height: auto;
 }
-video {
-    padding: 10%;
-    max-width: 80vw;
+video.gallery {
+    max-width: 100%;
     max-height: auto;
+}
+p.gallery-description {
+    font-family: 'Poppins';
+    color: #ffffff;
+    padding-top: 1em;
 }
