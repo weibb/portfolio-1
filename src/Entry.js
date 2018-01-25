@@ -52,15 +52,16 @@ export class Entry extends Component {
         else {
             header = <img src={ entry.headerSrc } className={entry.headerClass} alt="header image"  />
         }
+        const arrowClass = "divider-arrow " + entry.color;
         //const headerImg = import this.state.entry.headerSrc;
         return (
             <div className="entry" id="entry-master">
-                <div className="entry" id="entry-header">
+                <div className="entry" id="entry-header" class={entry.color}>
                     <div className="entry" id="entry-header-holder">
                         <img src={ entry.headerFrame } id="entry-frame" alt="device frame" />
                         {header}
                     </div>
-                    <div id="header-arrow" className = "divider-arrow" />
+                    <div id="header-arrow" className = {arrowClass}/>
                     <h1 id="entry-header-text"> {entry.title} </h1>
                 </div>
                 <div id="entry-description">
@@ -71,7 +72,7 @@ export class Entry extends Component {
                     {buttonHolder}
                     <div id="description-arrow" className = "divider-arrow" />
                 </div>
-                <div id="entry-gallery">
+                <div id="entry-gallery" class={entry.color}>
                     {gallery}
                 </div>
             </div>
