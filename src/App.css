@@ -69,7 +69,22 @@
 #entry-master {
     width: 100vw;
     position: absolute;
+    top: 0;
+    transition: all 0.5s linear;
 }
+
+#entry-master.hidden {
+    display: none;
+    opacity: 0;
+}
+
+
+#entry-master.visible {
+    display: block;
+    opacity: 1;
+}
+
+
 
 /* header */
 

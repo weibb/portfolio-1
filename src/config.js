@@ -8,7 +8,6 @@ import headerMoana from './media/moana/moana_mock.mp4';
 export const config = {
     entries: [
          {
-            id: 0,
             color: 'pink',
             title: "Mercedes E-Class Gallery",
             role: "Developer",
@@ -36,7 +35,6 @@ export const config = {
             ],
         },
         {
-           id: 1,
            color: 'blue',
            title: "Mercedes E-Class (Entry 2)",
            role: "Developer",

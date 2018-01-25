@@ -7,24 +7,25 @@ export class Entry extends Component {
         super( props );
         this.state = props.state;
         this.events = props.events;
+        this.hideEntry = props.hideEntry;
     }
 
     render() {
-
-        const entry = this.state.entry;
+        const entry = this.props.state.entry;
+        const entryVisible = this.props.state.showEntry ? "entry visible" : "entry hidden";
         const gallery = [];
         for(let i = 0; i < entry.gallery.length; i += 1){
             let galleryElements = [];
             if(entry.gallery[i].type==='video'){
-                galleryElements.push(<video className="gallery gallery-video" key={i} alt="gallery video" autoplay="autoplay" loop="loop"><source src={ entry.gallery[i].src } /></video>);
+                galleryElements.push(<video className="gallery gallery-video" key={i} alt="gallery video" autoPlay="autoPlay" loop="loop"><source src={ entry.gallery[i].src } /></video>);
             }
             else {
                 galleryElements.push(<img className="gallery gallery-image" key={i} src={entry.gallery[i].src} />);
             }
             if( entry.gallery[i].description ){
-                galleryElements.push(<p className="gallery-description">{entry.gallery[i].description}</p>)
+                galleryElements.push(<p key={"gallery-description" + i} className="gallery-description">{entry.gallery[i].description}</p>)
             }
-            gallery.push(<div className="gallery-item-holder">{galleryElements}</div>);
+            gallery.push(<div key={i + "-item-holder"} className="gallery-item-holder">{galleryElements}</div>);
         }
         console.log(gallery);
         if ( this.state.showEntry === true) {
@@ -47,7 +48,7 @@ export class Entry extends Component {
         }
         let header;
         if(entry.headerType==='video'){
-            header = <video className={entry.headerClass} alt="header image" autoplay="autoplay" loop="loop"><source src={ entry.headerSrc } /></video>
+            header = <video className={entry.headerClass} alt="header image" autoPlay="autoPlay" loop="loop"><source src={ entry.headerSrc } /></video>
         }
         else {
             header = <img src={ entry.headerSrc } className={entry.headerClass} alt="header image"  />
@@ -55,9 +56,15 @@ export class Entry extends Component {
         const arrowClass = "divider-arrow " + entry.color;
         //const headerImg = import this.state.entry.headerSrc;
         return (
-            <div className="entry" id="entry-master">
-                <div className="entry" id="entry-header" class={entry.color}>
+            <div className={entryVisible} id="entry-master">
+                <div id="entry-header" className={entry.color}>
                     <div className="entry" id="entry-header-holder">
+                        <button id="entry-back"
+                            onClick={( e ) => {
+                                this.hideEntry();
+                            }}
+                        > Back
+                        </button>
                         <img src={ entry.headerFrame } id="entry-frame" alt="device frame" />
                         {header}
                     </div>
@@ -72,7 +79,7 @@ export class Entry extends Component {
                     {buttonHolder}
                     <div id="description-arrow" className = "divider-arrow" />
                 </div>
-                <div id="entry-gallery" class={entry.color}>
+                <div id="entry-gallery" className={entry.color}>
                     {gallery}
                 </div>
             </div>
