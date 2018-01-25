@@ -37,7 +37,7 @@ export const config = {
         },
         {
            id: 1,
-           color: 'pink',
+           color: 'blue',
            title: "Mercedes E-Class (Entry 2)",
            role: "Developer",
            tags: [
@@ -50,10 +50,12 @@ export const config = {
            headerClass: 'header-tablet-landscape',
            headerFrame: tabletPortrait,
            github: 'https://github.com',
+           demo: 'https://google.com',
            gallery: [
                {
-                   src: mercedes0,
-                   type: 'image',
+                   src: headerMoana,
+                   type: 'video',
+                   description: 'this is a description',
                },
                {
                    src: mercedes1,

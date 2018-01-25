@@ -84,6 +84,9 @@
 #entry-header.pink {
     background-color: #d32a87;
 }
+#entry-header.blue {
+    background-color: #0000ff;
+}
 #entry-header-holder {
     height: 65vmin;
     width: 65vmin;
@@ -156,6 +159,9 @@
 }
 #entry-gallery.pink {
     background-color: #d32a87;
+}
+#entry-gallery.blue {
+    background-color: #0000ff;
 }
 
 h3, p {
