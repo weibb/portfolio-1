@@ -58,13 +58,13 @@ export class Entry extends Component {
         return (
             <div className={entryVisible} id="entry-master">
                 <div id="entry-header" className={entry.color}>
+                    <button id="entry-back"
+                        onClick={( e ) => {
+                            this.hideEntry();
+                        }}
+                    > Back
+                    </button>
                     <div className="entry" id="entry-header-holder">
-                        <button id="entry-back"
-                            onClick={( e ) => {
-                                this.hideEntry();
-                            }}
-                        > Back
-                        </button>
                         <img src={ entry.headerFrame } id="entry-frame" alt="device frame" />
                         {header}
                     </div>

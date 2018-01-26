@@ -97,10 +97,13 @@
     position: relative;
 }
 .pink {
-    background-color: #d32a87;
+    background-color: #ff1d84;
 }
 .blue {
-    background-color: #0000ff;
+    background-color: #00afd8;
+}
+.orange {
+    background-color: #ff8827;
 }
 #entry-header-holder {
     height: 65vmin;
@@ -222,11 +225,21 @@ p.gallery-description {
 
 button {
     position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
     height: 100%;
     outline: none;
     border: none;
     background: none;
+    color: #ffffff;
+}
+button#entry-back {
+    top: 4%;
+    left: 2%;
+    height: 5vmin;
+    width: 12vmin;
+    text-transform: uppercase;
+    font-family: 'Poppins';
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
 }
