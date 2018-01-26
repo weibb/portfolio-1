@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import headerFrame from './media/tablet_landscape.png';
-import button_black from './media/nav/button_black.png';
 import { Thumbnail } from './Thumbnail.js';
 
 export class Portfolio extends Component {
@@ -13,15 +11,17 @@ export class Portfolio extends Component {
 
     render() {
         const entries = this.props.state.config.entries;
-        let content;
-        let unfilteredList = [];
+        let content = [];
+        const itemsPerRow = 4;
+        let row = [];
         for (let i = 0; i < entries.length; i += 1) {
-            unfilteredList.push(<Thumbnail selectEntry={this.selectEntry} state={this.props.state} id ={i} key={"thumbnail-" + i} />)
+            row.push(<Thumbnail selectEntry={this.selectEntry} state={this.props.state} id ={i} key={"thumbnail-" + i} />);
+            if(row.length === itemsPerRow || i === entries.length - 1) {
+                content.push(<div className="row">{row}</div>);
+            }
         }
-        console.log('Entries: ' + unfilteredList);
-        content = unfilteredList;
         return (
-          <div className="portfolio-master">
+          <div id="row-holder">
               {content}
           </div>
         );

@@ -213,15 +213,15 @@ p.gallery-description {
 /*
     THUMBNAILS
 */
-.row-holder {
-    width: 80vw;
+#row-holder {
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 .row {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
