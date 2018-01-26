@@ -11,7 +11,8 @@ export class Thumbnail extends Component {
         let entry = state.config.entries[this.props.id];
         let className = '';
         className += entry.thumbnailShape || '';
-        className += this.props.match ? ' thumbnail match' : ' thumbnail no-match';
+        className += this.props.match ? ' thumbnail match ' : ' thumbnail no-match ';
+        className += entry.color || '';
         let inner;
         if ( entry.title ){
             inner = <div className="thumbnail-content-holder">

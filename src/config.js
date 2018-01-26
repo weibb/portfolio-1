@@ -35,7 +35,12 @@ export const config = {
             ],
         },
         {
+            color: 'pink',
+            shape: 'shape1',
+        },
+        {
            color: 'blue',
+           thumbnailShape: 'shape1',
            title: "Mercedes E-Class (Entry 2)",
            role: "Developer",
            tags: [
@@ -63,5 +68,6 @@ export const config = {
                },
            ],
        },
+
     ]
 }

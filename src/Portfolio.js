@@ -20,9 +20,6 @@ export class Portfolio extends Component {
         }
         console.log('Entries: ' + unfilteredList);
         content = unfilteredList;
-        // const thumbnails = this.props.state.config.entries.map( thumbnail, i =>(
-        //     <Thumbnail id ={i} />
-        // ))
         return (
           <div className="portfolio-master">
               {content}

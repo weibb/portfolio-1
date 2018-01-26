@@ -96,10 +96,10 @@
     justify-content: center;
     position: relative;
 }
-#entry-header.pink {
+.pink {
     background-color: #d32a87;
 }
-#entry-header.blue {
+.blue {
     background-color: #0000ff;
 }
 #entry-header-holder {
@@ -153,9 +153,6 @@
     z-index: 1;
 }
 
-#header-arrow.pink {
-    background-color: #d32a87;
-}
 #entry-description {
     padding-top: 10vh;
     padding-bottom: 10vh;
@@ -171,12 +168,6 @@
     min-height: 50vh;
     width: 100vw;
     position: relative;
-}
-#entry-gallery.pink {
-    background-color: #d32a87;
-}
-#entry-gallery.blue {
-    background-color: #0000ff;
 }
 
 h3, p {
@@ -213,4 +204,18 @@ p.gallery-description {
     font-family: 'Poppins';
     color: #ffffff;
     padding-top: 1em;
+}
+
+
+/*
+    THUMBNAILS
+*/
+.thumbnail {
+    height: 10vmin;
+    width: 4vmin;
+}
+
+.thumbnail.shape1 {
+    height: 20vmin;
+    width: 4vmin;
 }
