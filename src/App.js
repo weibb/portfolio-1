@@ -7,7 +7,7 @@ import { Thumbnail } from './Thumbnail.js';
 import { Portfolio } from './Portfolio.js';
 import { Nav } from './Nav.js';
 import { About } from './About.js';
-// import { Contact } from './Contact.js';
+import { Contact } from './Contact.js';
 
 const startingState = {
     config,
@@ -57,6 +57,7 @@ class App extends Component {
         <Nav state={this.state} selectCategory={this.selectCategory} toggleContact={this.toggleContact} toggleAbout={this.toggleAbout} />
         <Entry state={this.state} hideEntry={this.hideEntry} />
         <About state={this.state} toggleAbout={this.toggleAbout} />
+        <Contact state={this.state} toggleContact={this.toggleContact} />
       </div>
     );
   }
