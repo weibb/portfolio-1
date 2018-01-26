@@ -24,11 +24,7 @@ class App extends Component {
         console.log(this.state);
         this.selectEntry = this.selectEntry.bind( this );
         this.hideEntry = this.hideEntry.bind( this );
-        // this.state.items = [ this.state.pub ];
-        // this.filter = this.filter.bind( this );
-        // this.selectType = this.selectType.bind( this );
-        // this.selectCategory = this.selectCategory.bind( this );
-        // this.getSummary = this.getSummary.bind( this );
+        this.selectCategory = this.selectCategory.bind( this );
     }
     selectEntry(id) {
         this.setState({ entry: config.entries[id], showEntry: true });
