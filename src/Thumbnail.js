@@ -16,7 +16,7 @@ export class Thumbnail extends Component {
         let inner;
         if ( entry.title ){
             inner = <div className="thumbnail-content-holder">
-                <img alt="" src={entry.thumbnail} />
+                <img alt="" src={entry.thumbnail} className="thumbnail-preview" />
                 <button
                     onClick={( e ) => {
                         const self = this;

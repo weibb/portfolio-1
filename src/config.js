@@ -9,6 +9,7 @@ export const config = {
     entries: [
          {
             color: 'pink',
+            thumbnail: mercedes0,
             title: "Mercedes E-Class Gallery",
             role: "Developer",
             tags: [
