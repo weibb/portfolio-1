@@ -18,6 +18,7 @@ export class Portfolio extends Component {
             row.push(<Thumbnail selectEntry={this.selectEntry} state={this.props.state} id ={i} key={"thumbnail-" + i} />);
             if(row.length === itemsPerRow || i === entries.length - 1) {
                 content.push(<div className="row">{row}</div>);
+                row = [];
             }
         }
         return (
