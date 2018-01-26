@@ -44,7 +44,7 @@ export class Entry extends Component {
         }
         let buttonHolder;
         if (descriptionButtons.length > 0) {
-            buttonHolder = <div id="buttonHolder">{descriptionButtons}</div>
+            buttonHolder = <div id="button-holder">{descriptionButtons}</div>
         }
         let header;
         if(entry.headerType==='video'){

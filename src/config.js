@@ -278,6 +278,7 @@ export const config = {
         headerClass: 'header-tablet-landscape',
         headerFrame: tabletPortrait,
         github: 'https://github.com',
+        demo: 'https://github.com',
         gallery: [
             {
                 src: mercedes0,

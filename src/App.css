@@ -20,7 +20,9 @@
 .App-title {
   font-size: 1.5em;
 }
-
+#demo, #github {
+    position: relative;
+}
 #demo img, #github img {
     height: 100%;
     width: 100%;
@@ -40,8 +42,9 @@
     font-size: 1.4rem;
 }
 
-#buttonHolder {
+#button-holder {
     width: 100vw;
+    position: relative;
     display: flex;
     justify-content: center;
     margin-top: 2rem;
@@ -49,12 +52,13 @@
 }
 
 #demo, #github {
+    margin: 0 1rem;
     height: 3rem;
     width: 15rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: relative;
 }
 
 .App-intro {
@@ -145,6 +149,7 @@
     position: absolute;
     bottom: 0%;
     letter-spacing: 0.1em;
+    z-index: 1;
 }
 
 .divider-arrow {
@@ -160,7 +165,12 @@
     z-index: 1;
 }
 
+#header-arrow {
+    z-index: 1;
+}
+
 #entry-description {
+    background-color: #ffffff;
     padding-top: 10vh;
     padding-bottom: 10vh;
     position: relative;
