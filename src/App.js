@@ -6,11 +6,15 @@ import { Entry } from './Entry.js';
 import { Thumbnail } from './Thumbnail.js';
 import { Portfolio } from './Portfolio.js';
 import { Nav } from './Nav.js';
+import { About } from './About.js';
+// import { Contact } from './Contact.js';
 
 const startingState = {
     config,
     entry: config.entries[config.entries.length-1],
     showEntry: false,
+    showAbout: false,
+    showContact: false,
     tags: {},
 }
 
@@ -25,6 +29,8 @@ class App extends Component {
         this.selectEntry = this.selectEntry.bind( this );
         this.hideEntry = this.hideEntry.bind( this );
         this.selectCategory = this.selectCategory.bind( this );
+        this.toggleAbout = this.toggleAbout.bind( this );
+        this.toggleContact = this.toggleContact.bind( this );
     }
     selectEntry(id) {
         this.setState({ entry: config.entries[id], showEntry: true });
@@ -38,12 +44,19 @@ class App extends Component {
     hideEntry() {
         this.setState({ showEntry: false });
     }
+    toggleAbout() {
+        this.setState({ showAbout: !this.state.showAbout });
+    }
+    toggleContact() {
+        this.setState({ showContact: !this.state.showContact });
+    }
   render() {
     return (
       <div className="App">
         <Portfolio state={this.state} selectEntry={this.selectEntry} />
-        <Nav state={this.state} selectCategory={this.selectCategory} />
+        <Nav state={this.state} selectCategory={this.selectCategory} toggleContact={this.toggleContact} toggleAbout={this.toggleAbout} />
         <Entry state={this.state} hideEntry={this.hideEntry} />
+        <About state={this.state} toggleAbout={this.toggleAbout} />
       </div>
     );
   }

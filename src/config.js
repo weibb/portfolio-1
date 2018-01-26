@@ -13,6 +13,14 @@ export const config = {
         'development',
         'illustration',
     ],
+    about: {
+        title: 'About',
+        description: 'Template for About panel',
+    },
+    contact: {
+        title: 'Contact',
+        description: 'Template for Contact panel',
+    },
     entries: [
          {
             color: 'pink',

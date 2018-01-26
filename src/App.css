@@ -66,24 +66,28 @@
   to { transform: rotate(360deg); }
 }
 
-#entry-master {
+#entry-master, #about-master, #contact-master {
     width: 100vw;
     position: absolute;
     top: 0;
     transition: all 0.5s linear;
 }
 
-#entry-master.hidden {
+#entry-master.hidden, #about-master.hidden, #contact-master.hidden {
     display: none;
     opacity: 0;
 }
 
 
-#entry-master.visible {
+#entry-master.visible, #about-master.visible, #contact-master.visible {
     display: block;
     opacity: 1;
 }
 
+#about-master, #contact-master {
+    background-color: #ffffff;
+    height: 100vh;
+}
 
 
 /* header */
@@ -265,7 +269,7 @@ button {
     color: #ffffff;
 }
 
-button#entry-back {
+button#entry-back, button#about-back, button#contact-back {
     position: absolute;
     top: 4%;
     left: 2%;
@@ -310,11 +314,14 @@ img#logo{
     flex-direction: column;
     align-items: flex-start;
 }
-button.category {
+button.category, button.about, button.contact {
     position: relative;
     color: #000000;
 }
 button.category.selected {
     background-color: #666666;
     color: #ffffff;
+}
+button#about-back, button#contact-back {
+    color: #000000;
 }

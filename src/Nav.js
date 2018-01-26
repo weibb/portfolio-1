@@ -7,6 +7,8 @@ export class Nav extends Component {
         this.filter = props.filter;
         this.state = props.state;
         this.selectCategory = props.selectCategory;
+        this.toggleAbout = props.toggleAbout;
+        this.toggleContact = props.toggleContact;
     }
 
     render() {
@@ -29,6 +31,22 @@ export class Nav extends Component {
                             </button>
                         </li>
                     ))}
+                    <li key="button-about">
+                        <button className="about"
+                            onClick={( e ) => {
+                                this.toggleAbout();
+                            }}
+                        > About
+                        </button>
+                    </li>
+                    <li key="button-contact">
+                        <button className="contact"
+                            onClick={( e ) => {
+                                this.toggleContact();
+                            }}
+                        > Contact
+                        </button>
+                    </li>
                 </ul>
             </div>
 
