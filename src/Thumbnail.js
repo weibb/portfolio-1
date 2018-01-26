@@ -9,9 +9,24 @@ export class Thumbnail extends Component {
     render() {
         const state = this.props.state;
         let entry = state.config.entries[this.props.id];
+        let tagMatch = false;
+        // if no tag is selected (no value of true exists in tags object), everything is a match
+        if (entry.tags && Object.values(state.tags).indexOf(true) === -1 ) {
+            tagMatch = true;
+        }
+        // otherwise, check to see if any value of entry.tags matches any true value of state.tags
+        else if (entry.tags) {
+            for (let j = 0; j < entry.tags.length; j += 1) {
+                console.log(entry.tags[j]);
+                if(state.tags[entry.tags[j]]) {
+                    tagMatch = true;
+                    break;
+                }
+            }
+        }
         let className = '';
         className += entry.thumbnailShape || '';
-        className += this.props.match ? ' thumbnail match ' : ' thumbnail no-match ';
+        className += tagMatch ? ' thumbnail match ' : ' thumbnail no-match ';
         className += entry.color || '';
         let inner;
         if ( entry.title ){

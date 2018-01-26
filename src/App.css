@@ -232,6 +232,7 @@ p.gallery-description {
     width: 4vmin;
     margin: 2rem;
     position: relative;
+    transition: 0.5s all ease;
 }
 
 .thumbnail.shape1 {
@@ -244,6 +245,10 @@ p.gallery-description {
     width: 100%;
     margin: 0;
     padding: 0;
+}
+.thumbnail.no-match {
+    transform: scale(0.8, 0.8);
+    opacity: 0.5;
 }
 
 button {

@@ -18,8 +18,9 @@ export const config = {
             color: 'pink',
             thumbnail: mercedes0,
             title: "Mercedes E-Class Gallery",
-            role: "Developer",
+            role: "Designer, Developer",
             tags: [
+                'design',
                 'development',
             ],
             project: "Mobile rebuild of a desktop rich media advertisement rendered in a 3D environment. The 3D library exceeded the file weight limit of 300KB initial load and 1MB maximum load for all images and code. I worked with the client to develop a mobile advertisement that recreated the look and feel of the original using only web elements.",
@@ -49,9 +50,9 @@ export const config = {
            color: 'blue',
            thumbnailShape: 'shape1',
            title: "Mercedes E-Class (Entry 2)",
-           role: "Developer",
+           role: "Designer",
            tags: [
-               'development',
+               'design',
            ],
            project: "Mobile rebuild of a desktop rich media advertisement rendered in a 3D environment. The 3D library exceeded the file weight limit of 300KB initial load and 1MB maximum load for all images and code. I worked with the client to develop a mobile advertisement that recreated the look and feel of the original using only web elements.",
            date: 2016,
@@ -78,9 +79,10 @@ export const config = {
        {
           color: 'orange',
           title: "Mercedes E-Class (Entry 3)",
-          role: "Developer",
+          role: "Developer, Illustrator",
           tags: [
               'development',
+              'illustration',
           ],
           project: "Mobile rebuild of a desktop rich media advertisement rendered in a 3D environment. The 3D library exceeded the file weight limit of 300KB initial load and 1MB maximum load for all images and code. I worked with the client to develop a mobile advertisement that recreated the look and feel of the original using only web elements.",
           date: 2016,
@@ -108,9 +110,9 @@ export const config = {
          color: 'blue',
          thumbnail: mercedes0,
          title: "Mercedes E-Class (Entry 4)",
-         role: "Developer",
+         role: "Designer",
          tags: [
-             'development',
+             'design',
          ],
          project: "Mobile rebuild of a desktop rich media advertisement rendered in a 3D environment. The 3D library exceeded the file weight limit of 300KB initial load and 1MB maximum load for all images and code. I worked with the client to develop a mobile advertisement that recreated the look and feel of the original using only web elements.",
          date: 2016,
@@ -168,9 +170,10 @@ export const config = {
       {
        color: 'blue',
        title: "Mercedes E-Class (Entry 6)",
-       role: "Developer",
+       role: "Art Director, Prop Artist",
        tags: [
-           'development',
+           'design',
+           'illustration',
        ],
        project: "Mobile rebuild of a desktop rich media advertisement rendered in a 3D environment. The 3D library exceeded the file weight limit of 300KB initial load and 1MB maximum load for all images and code. I worked with the client to develop a mobile advertisement that recreated the look and feel of the original using only web elements.",
        date: 2016,
@@ -226,9 +229,9 @@ export const config = {
       color: 'blue',
       thumbnailShape: 'shape1',
       title: "Mercedes E-Class (Entry 8)",
-      role: "Developer",
+      role: "Illustrator",
       tags: [
-          'development',
+          'illustration',
       ],
       project: "Mobile rebuild of a desktop rich media advertisement rendered in a 3D environment. The 3D library exceeded the file weight limit of 300KB initial load and 1MB maximum load for all images and code. I worked with the client to develop a mobile advertisement that recreated the look and feel of the original using only web elements.",
       date: 2016,
