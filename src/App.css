@@ -213,9 +213,16 @@ p.gallery-description {
 /*
     THUMBNAILS
 */
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
 .thumbnail {
     height: 10vmin;
     width: 4vmin;
+    margin: 2rem;
 }
 
 .thumbnail.shape1 {
@@ -223,16 +230,26 @@ p.gallery-description {
     width: 4vmin;
 }
 
-button {
-    position: absolute;
-    width: 100%;
+.thumbnail-content-holder {
     height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
     outline: none;
     border: none;
     background: none;
     color: #ffffff;
 }
+
 button#entry-back {
+    position: absolute;
     top: 4%;
     left: 2%;
     height: 5vmin;
